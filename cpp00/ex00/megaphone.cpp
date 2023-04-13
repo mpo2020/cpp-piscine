@@ -9,7 +9,6 @@ std::string upperString(std::string str)
 	{
 		str[i] = std::toupper(str[i]);
 	}
-	foreach(toupper(str), str.begin(), str.end())
 	return (str);
 }
 

@@ -2,17 +2,25 @@ NAME	= megaphone
 
 SRC		= megaphone.cpp
 
+OBJ		= ${SRC:.cpp=.o}
+
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 
 CPP		= g++
 
-all :
-		@${CPP} ${FLAGS} ${SRC} -o ${NAME}
-		@echo "Sucess"
+all :	${NAME}
 
-fclean :
+${NAME}: ${OBJ}
+		@${CPP} ${FLAGS} ${OBJ} -o ${NAME}
+		@echo "\033[1;32mSucess\033[0m"
+		
+clean :
+		@rm ${OBJ}
+		@echo "\033[1;36mObjects Cleared\033[0m"
+
+fclean : clean
 		@rm ${NAME}
-		@echo "Clear"
+		@echo "\033[1;34mCleared\033[0m"
 
 re : fclean all
 

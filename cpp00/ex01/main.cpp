@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/14 18:27:28 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/17 18:14:09 by mpolisse         ###   ########.fr       */
+/*   Created: 2023/04/16 15:47:25 by mpolisse          #+#    #+#             */
+/*   Updated: 2023/04/17 18:15:18 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "PhoneBook.hpp"
 
-# include <iostream>
-#include "Contact.hpp"
-
-class PhoneBook{
-	private:
-		Contact cont[8];
-	public:
-		void add(int i);
-		void printData();
-		PhoneBook();
-		~PhoneBook();
-		void printt();
-};
-
-#endif
+int main(void)
+{
+	PhoneBook data;
+	data.add(0);
+	data.printt();
+	
+	return (0);
+}

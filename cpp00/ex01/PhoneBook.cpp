@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 13:01:35 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/18 17:43:24 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/04/18 18:08:53 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void PhoneBook::add(int i)
 	std::getline(std::cin, contactsData[0]);
 	for (int j = 0; j < 5; j++)
 	{
-		std::cout << inputs[j] << ": ";
+		std::cout << inputs[j] << ": " << std::endl;
 		std::getline(std::cin, contactsData[j]);
 		contactsData[j].empty() ? j--: j;
 	}

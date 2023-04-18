@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 13:00:56 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/18 13:36:53 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/04/18 17:24:24 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,13 @@ void Contact::printdata(int index)
 	}
 	
 	std::cout << allNames[0] << "|" << allNames[1] << "|" << allNames[2] << "|" << allNames[3] << "|" <<  std::endl;
+}
+
+void Contact::printContactsData()
+{
+	std::string contactNames[5] = {this->firstName, this->lastName, this->nickName, this->phoneNumber ,this->darkestSecret};
+	std::string stringNames[5] = {"First name: ", "Last name: ", "Nickname: ", "Phone number: ", "Darkest secret: "};
+	
+	for (int i = 0; i < 5; i++)
+		std::cout << stringNames[i] << contactNames[i] << std::endl;
 }

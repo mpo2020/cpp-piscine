@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 08:37:24 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/17 17:56:31 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/04/18 14:41:49 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define CONTACT_HPP
 
 # include <iostream>
-#include "Contact.hpp"
 
 class Contact {
 	private:
@@ -26,10 +25,8 @@ class Contact {
 	public:
 		Contact(void);
 		Contact(std::string firstName, std::string lastName, std::string nickName, std::string phoneNumber, std::string darkestSecret);
-		void printdata();
+		void printdata(int i);
 		//~Contact();
-		
-
 };
 
 

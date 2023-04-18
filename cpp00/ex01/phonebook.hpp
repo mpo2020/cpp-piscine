@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 18:27:28 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/17 18:14:09 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/04/18 13:40:11 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 class PhoneBook{
 	private:
 		Contact cont[8];
+		int		numberContacts;
 	public:
 		void add(int i);
-		void printData();
 		PhoneBook();
 		~PhoneBook();
-		void printt();
+		void search(int i);
 };
 
 #endif

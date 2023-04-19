@@ -6,22 +6,24 @@ OBJ		= ${SRC:.cpp=.o}
 
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 
-CPP		= g++
+CPP		= c++
 
 ICL		= PhoneBook.hpp Contact.hpp
 
 all :	${NAME}
 
 ${NAME}: ${OBJ}
-		@${CPP} ${FLAGS} ${OBJ} -o ${NAME}
+		@${CPP} ${FLAGS} ${SRC} -o ${NAME}
 		@echo "\033[1;32mSucess\033[0m"
+${OBJ} : ${SRC}
+	@${CPP} ${FLAGS} -I ./ -c ${subst .o,.cpp,$@} -o $@ 
 		
 clean :
-		@rm ${OBJ}
+		@${RM} ${OBJ}
 		@echo "\033[1;36mObjects Cleared\033[0m"
 
 fclean : clean
-		@rm ${NAME}
+		@${RM} ${NAME}
 		@echo "\033[1;34mCleared\033[0m"
 
 re : fclean all

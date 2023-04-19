@@ -6,14 +6,14 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 13:01:35 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/19 15:51:18 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/04/19 18:26:30 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(){
-	this->numberContacts = 0;
+	this->numberContacts = -1;
 }
 
 void PhoneBook::add(int i)
@@ -28,8 +28,13 @@ void PhoneBook::add(int i)
 		contactsData[j].empty() ? j--: j;
 	}
 	Contact newCont(contactsData[0], contactsData[1], contactsData[2],contactsData[3],contactsData[4]);
+
 	if (this->numberContacts < 8)
+	{
+		if (this->numberContacts == -1)
+			this->numberContacts++;
 		this->numberContacts++;	
+	}
 	this->cont[i] = newCont;
 }
 

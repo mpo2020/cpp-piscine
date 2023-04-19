@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 15:47:25 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/19 18:41:36 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/04/19 18:56:23 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,16 +91,16 @@ int main(void)
 	{
 		std::cout << "\033[1;36mChoose one input ADD, SEARCH, EXIT:\033[0m " << std::endl ;
 		std::cin >> input; 		
-		if (input.compare("ADD") == 0 || input.compare("add") == 0)
+		if (input.compare("ADD") == 0 )
 			data.add(i++);
-		else if (input.compare("SEARCH") == 0 || input.compare("search") == 0)
+		else if (input.compare("SEARCH") == 0)
 		{
 			std::cout << "\033[1;34m ___________________________________________\033[0m" << std::endl;
 			std::cout << "\033[1;34m|\033[0m     \033[1;36mIndex\33[0m\033[1;34m|\033[0m\033[1;36mFirst Name\033[0m\033[1;34m|\033[0m \033[1;36mLast Name\033[0m\033[1;34m|\033[0m \033[1;36m Nickname\033[0m\033[1;34m|\033[0m" << std::endl;
 			std::cout << "\033[1;34m|__________|__________|__________|__________|\033[0m" << std::endl;
 			searchContacts(data);
 		}
-		else if (input.compare("EXIT") == 0 || input.compare("exit") == 0)
+		else if (input.compare("EXIT") == 0)
 			exit(EXIT_SUCCESS);
 		else
 			std::cout << "\033[1;31mPlease enter a valid command!!!\033[0m" << std::endl; 

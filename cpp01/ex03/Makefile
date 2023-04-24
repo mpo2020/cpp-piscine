@@ -1,12 +1,14 @@
-NAME	= brain
+NAME	= IshootSherif
 
-SRC		= main.cpp
+SRC		= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJ		= ${SRC:.cpp=.o}
 
 FLAGS	= -Wall -Wextra -Werror -std=c++98
 
 CPP		= c++
+
+ICL		= Weapon.hpp HumanA.hpp HumanB.hpp
 
 all :	${NAME}
 

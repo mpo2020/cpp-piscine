@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 10:51:28 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/24 14:56:49 by mpolisse         ###   ########.fr       */
+/*   Created: 2023/04/24 16:47:40 by mpolisse          #+#    #+#             */
+/*   Updated: 2023/04/24 17:33:03 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-int main(void)
+HumanA::HumanA(std::string name, Weapon weapon)
 {
-	Zombie *horde;
+	this->name = name;
+	this->weapon = weapon;
+}
 
-	horde = zombieHorde(7, "Troll");
+void HumanA::attack()
+{
+	Weapon weapon = this->weapon;
+	std::string name = this->name;
 
-	delete[] horde;
-	return (0);
+	std::cout << name << " attacks with their " << weapon.getType();
 }

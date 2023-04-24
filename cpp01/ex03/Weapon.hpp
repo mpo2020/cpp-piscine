@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 10:51:28 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/24 14:56:49 by mpolisse         ###   ########.fr       */
+/*   Created: 2023/04/24 16:36:07 by mpolisse          #+#    #+#             */
+/*   Updated: 2023/04/24 17:45:30 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-int main(void)
+#include <iostream>
+
+class Weapon
 {
-	Zombie *horde;
+private:
+	std::string	type;
 
-	horde = zombieHorde(7, "Troll");
+public:
 
-	delete[] horde;
-	return (0);
-}
+	Weapon();
+	Weapon(std::string	type);
+	const std::string getType();
+	void setType(std::string type);
+};
+
+#endif

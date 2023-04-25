@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 17:16:41 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/24 17:40:02 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/04/25 13:17:00 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main (void)
 		HumanB jim("Jim");
 		jim.setWeapon(club);
 		jim.attack();
-		club.setType("HAMER"); 
+		club.setType("Mjonir"); 
 		jim.attack();
 	}
 	return (0);

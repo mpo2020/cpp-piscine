@@ -1,4 +1,4 @@
-NAME	= brain
+NAME	= SedIsForLosers
 
 SRC		= main.cpp
 

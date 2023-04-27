@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 16:01:48 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/27 17:48:50 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/04/27 17:52:50 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int	main(int argc, char **argv)
 		fileContent = findReplaceText(fileContent, argv[2], argv[3]);
 		writeFile(argv[1], fileContent);
 	}
-	
 	
 	return (0);
 

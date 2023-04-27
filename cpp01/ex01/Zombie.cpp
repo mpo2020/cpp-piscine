@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 11:53:22 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/04/22 18:05:33 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/04/27 17:53:04 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Zombie::Zombie()
 {
+	
 }
 
 Zombie::Zombie(std::string name)

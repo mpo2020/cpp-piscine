@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:47:15 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/08 17:23:58 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/08 18:59:01 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,4 @@ void findReplaceText(std::string &fileContent, std::string &firstArgument, std::
 	fileContent.erase(start, len);
 	fileContent.insert(start, secondArgument);
 	start +=  secondArgument.length();
-	std::cout << start << std::endl;
-
 }

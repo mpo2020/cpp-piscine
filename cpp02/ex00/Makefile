@@ -1,6 +1,6 @@
-NAME	= 
+NAME	= a.out
 
-SRC		= 
+SRC		= Fixed.cpp main.cpp
 
 OBJ		= ${SRC:.cpp=.o}
 
@@ -8,7 +8,7 @@ FLAGS	= -Wall -Wextra -Werror -std=c++98
 
 CPP		= c++
 
-ICL		= 
+ICL		= Fixed.hpp
 
 all :	${NAME}
 

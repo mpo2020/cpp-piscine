@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 11:31:53 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/15 19:29:17 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/17 12:13:41 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ private:
 
 public:
 	Fixed();
-	Fixed(Fixed& fixedOriginal);
+	Fixed(const Fixed& fixedOriginal);
 	Fixed(const int integerNumber);
 	Fixed(const float floatNumber);
 	Fixed &operator=(const Fixed& argument);
-	std::ostream &Fixed::operator<<(const Fixed& argument);
+	friend std::ostream& operator<<(std::ostream& os, const Fixed& objeto);
 	~Fixed();
 	
 	int getRawBits( void ) const;

@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:03:18 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/23 18:51:22 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/23 19:35:00 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(void){
 	
-	ClapTrap newRobot("Wolverine");
+	ClapTrap newRobot("Dick Dastardly");
 	ClapTrap copyRobot;
 	ClapTrap const otherCopyRobot(newRobot);
 	
@@ -36,6 +36,7 @@ int main(void){
 	newRobot.beRepaired(1);
 	newRobot.beRepaired(1);
 	newRobot.status();
+	newRobot.attack("Rufus Lumberjack");
 	std::cout << "Rufus Luberjack attack with axe ";
 	newRobot.takeDamage(8);
 	std::cout << "Rufus Luberjack attack with axe ";

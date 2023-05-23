@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:03:08 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/23 18:39:15 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/23 19:33:33 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ClapTrap::ClapTrap(){
 
 ClapTrap::ClapTrap(std::string name){
 	
-	this->_name = name;
+	this->_name = "\033[33m" + name + "\033[0m";
 	this->_hitPoints = 10;
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;
@@ -132,7 +132,7 @@ void ClapTrap::setattackDamage(int amount)
 
 void ClapTrap::status()
 {
-	int nameLen = this->_name.length() + 1;
+	int nameLen = this->_name.length() - 8;
 	int numberLen = 0;
 	int tmp = 0;
 	int i = 0;

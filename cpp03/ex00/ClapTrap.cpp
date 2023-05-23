@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:03:08 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/23 17:38:50 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/23 18:39:15 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,27 +24,27 @@ ClapTrap::ClapTrap(std::string name){
 	this->_hitPoints = 10;
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;
-	std::cout << this->_name << " was created!" << std::endl;
+	std::cout << this->_name << " \033[32mwas created!\033[0m" << std::endl;
 }
 
 ClapTrap::~ClapTrap(){
-	std::cout << this->_name << " was destroyed!" << std::endl;
+	std::cout << this->_name << " \033[31mwas destroyed!\033[0m" << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap& original){
-	std::cout << this->_name << " was copied!" << std::endl;
+ClapTrap::ClapTrap(const ClapTrap &original){
+	std::cout << this->_name << " \033[32mwas copied!\033[0m" << std::endl;
 	*this = original;
 }
 
 //Overload operation##############################################################################
 
-ClapTrap ClapTrap::operator=(const ClapTrap& argument)
+ClapTrap &ClapTrap::operator=(const ClapTrap& argument)
 {
+	std::cout << this->_name << " \033[32mwas Cloned!\033[0m" << std::endl;
+	this->_name = argument._name;
 	this->_attackDamage = argument._attackDamage;
 	this->_energyPoints = argument._energyPoints;
 	this->_hitPoints = argument._hitPoints;
-	this->_name = argument._name;
-	
 	return (*this);
 }
 
@@ -151,7 +151,7 @@ void ClapTrap::status()
 		std::cout << "\033[36m|\033[0m\033[94mHP:\033[0m    " << "\033[32m" << this->_hitPoints << "\033[0m";
 	tmp = this->_hitPoints;
 	if (tmp < 0)
-		numberLen = -1;
+		numberLen = 1;
 	else
 		numberLen = 0;
 	tmp = tmp < 0 ? tmp * -1 : tmp;
@@ -173,7 +173,7 @@ void ClapTrap::status()
 		std::cout << "\033[36m|\033[0m\033[94mEP:\033[0m    " << "\033[32m" << this->_energyPoints << "\033[0m";
 	tmp = this->_energyPoints;
 	if (tmp < 0)
-		numberLen = -1;
+		numberLen = 1;
 	else
 		numberLen = 0;
 	tmp = tmp < 0 ? tmp * -1 : tmp;
@@ -197,7 +197,7 @@ void ClapTrap::status()
 		if (tmp < 0)
 		numberLen = 0;
 	else
-		numberLen = -1;
+		numberLen = 1;
 	if (tmp < 0)
 		numberLen = 2;
 	else

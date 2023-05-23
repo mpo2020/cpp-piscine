@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:03:21 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/23 15:47:51 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/23 18:54:04 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ private:
 public:
 	ClapTrap();
 	ClapTrap(std:: string name);
-	ClapTrap(ClapTrap& original);
+	ClapTrap(const ClapTrap &original);
 	~ClapTrap();
 	
 	std::string getName();
@@ -38,7 +38,7 @@ public:
 	void setattackDamage(int amount);
 
 	
-	ClapTrap operator=(const ClapTrap& argument);
+	ClapTrap &operator=(const ClapTrap& argument);
 	
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);

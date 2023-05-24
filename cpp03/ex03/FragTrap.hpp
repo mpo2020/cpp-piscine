@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 10:51:28 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/10 17:19:31 by mpolisse         ###   ########.fr       */
+/*   Created: 2023/05/24 07:33:31 by mpolisse          #+#    #+#             */
+/*   Updated: 2023/05/24 13:43:29 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef FRAGTRAP_CPP
+# define FRAGTRAP_CPP
 
-int main(void)
-{
-	Zombie *horde;
+#include "ClapTrap.hpp"
 
-	horde = zombieHorde(7, "Troll");
-	delete[] horde;
-	return (0);
-}
+class FragTrap : public ClapTrap {
+public:
+	FragTrap();
+	FragTrap(std:: string name);
+	FragTrap(const FragTrap &original);
+	~FragTrap();
+	
+	FragTrap &operator=(const FragTrap& argument);
+	
+	void attack(const std::string& target);
+	void highFivesGuys(void);
+};
+
+#endif

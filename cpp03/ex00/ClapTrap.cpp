@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:03:08 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/23 19:33:33 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/24 10:42:48 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 //Constructors##############################################################################
 
 ClapTrap::ClapTrap(){
-
+	this->_name = "\033[33mDefault\033[0m";
+	this->_hitPoints = 10;
+	this->_energyPoints = 10;
+	this->_attackDamage = 0;
 }
 
 ClapTrap::ClapTrap(std::string name){
@@ -73,11 +76,11 @@ void ClapTrap::takeDamage(unsigned int amount){
 void ClapTrap::beRepaired(unsigned int amount){
 	
 	if (this->_hitPoints <= 0){
-		std::cout << "ClapTrap " << this->_name << "\033[95m can't be repair attack because it's already destroyed.\033[0m" << std::endl;
+		std::cout << this->_name << "\033[95m can't be repair attack because it's already destroyed.\033[0m" << std::endl;
 	} else if (this->_energyPoints <= 0) {
-		std::cout << "ClapTrap " << this->_name << " \033[95mcan't  be repaired because it has no energy points.\033[0m" << std::endl;
+		std::cout << this->_name << " \033[95mcan't  be repaired because it has no energy points.\033[0m" << std::endl;
 	} else{
-		std::cout << "ClapTrap " << this->_name << " \033[32mrepared " << amount << " damage.\033[0m" << std::endl;
+		std::cout << this->_name << " \033[32mrepared " << amount << " damage.\033[0m" << std::endl;
 		this->_hitPoints += amount;
 		this->_energyPoints--;
 	}

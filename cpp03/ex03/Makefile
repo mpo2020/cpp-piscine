@@ -1,6 +1,6 @@
-NAME	= fragtrap
+NAME	= diamondtrap
 
-SRC		= ./main.cpp ./ClapTrap.cpp ./ScavTrap.cpp ./FragTrap.cpp
+SRC		= ./main.cpp ./ClapTrap.cpp ./ScavTrap.cpp ./FragTrap.cpp ./DiamondTrap.cpp
 
 OBJ		= ${SRC:.cpp=.o}
 
@@ -8,7 +8,7 @@ FLAGS	= -Wall -Wextra -Werror -std=c++98
 
 CPP		= c++
 
-ICL		= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+ICL		= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
 all :	${NAME}
 

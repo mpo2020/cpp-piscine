@@ -6,13 +6,13 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 07:33:29 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/24 11:04:08 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/25 14:10:24 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() :  ClapTrap() {
+ScavTrap::ScavTrap() {
 	this->_name = "\033[33mDefault\033[0m";
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;

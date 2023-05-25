@@ -6,44 +6,28 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:03:18 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/24 13:52:41 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/25 16:34:36 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void){
 	
-	ScavTrap newRobot("Muttley");
-	FragTrap otherRobot("Hermione");
+	DiamondTrap robot("Hermione");
 	
-	otherRobot.status();
-	newRobot.status();
-	newRobot.attack("Hermione");
-	otherRobot.takeDamage(20);
-	otherRobot.status();
-	otherRobot.attack("Muttley");
-	newRobot.takeDamage(30);
-	newRobot.guardGate();
-	newRobot.status();
-	newRobot.attack("Hermione");
-	otherRobot.takeDamage(20);
-	otherRobot.status();
-	otherRobot.attack("Muttley");
-	newRobot.takeDamage(30);
-	newRobot.guardGate();
-	newRobot.status();
-	otherRobot.beRepaired(30);
-	otherRobot.status();
-	otherRobot.attack("Muttley");
-	newRobot.takeDamage(30);
-	otherRobot.attack("Muttley");
-	newRobot.takeDamage(30);
-	newRobot.status();
-	otherRobot.status();
-	otherRobot.highFivesGuys();
-	
+	robot.attack("Tutu");
+	robot.whoAmI();
+	robot.status();
+	robot.beRepaired(5);
+	robot.status();
+	robot.takeDamage(6);
+	robot.highFivesGuys();
+	robot.guardGate();
+	robot.status();
+
 	return (0);
 	
 }

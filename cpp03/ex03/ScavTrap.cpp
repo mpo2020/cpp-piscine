@@ -6,17 +6,20 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 07:33:29 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/24 11:04:08 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/25 15:16:19 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() :  ClapTrap() {
+ScavTrap::ScavTrap(){
 	this->_name = "\033[33mDefault\033[0m";
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
+	_defaultHp = _hitPoints;
+	_defaultEp = _energyPoints;
+	_defaultAp = _attackDamage;
 	std::cout << this->_name << " \033[32mScavTrap was created!\033[0m" << std::endl;
 }
 
@@ -26,6 +29,9 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
+	_defaultHp = _hitPoints;
+	_defaultEp = _energyPoints;
+	_defaultAp = _attackDamage;
 	std::cout << this->_name << " \033[32mScavTrap was created!\033[0m" << std::endl;
 }
 

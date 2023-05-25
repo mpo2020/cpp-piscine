@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:03:08 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/24 13:55:13 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:34:24 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ ClapTrap::ClapTrap(){
 	this->_hitPoints = 10;
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;
+	std::cout << this->_name << " \033[32mClapTrap was created!\033[0m" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name){

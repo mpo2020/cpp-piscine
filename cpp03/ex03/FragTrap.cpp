@@ -6,17 +6,20 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 07:33:29 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/24 13:45:41 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/25 15:17:01 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() :  ClapTrap() {
+FragTrap::FragTrap(){
 	this->_name = "\033[33mDefault\033[0m";
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
+	_defaultHp = _hitPoints;
+	_defaultEp = _energyPoints;
+	_defaultAp = _attackDamage;
 	std::cout << this->_name << " \033[32mFragTrap was created!\033[0m" << std::endl;
 }
 
@@ -26,6 +29,9 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name) {
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;
+	_defaultHp = _hitPoints;
+	_defaultEp = _energyPoints;
+	_defaultAp = _attackDamage;	
 	std::cout << this->_name << " \033[32mFragTrap was created!\033[0m" << std::endl;
 }
 

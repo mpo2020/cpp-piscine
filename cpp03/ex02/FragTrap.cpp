@@ -6,13 +6,13 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 07:33:29 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/24 13:45:41 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/25 14:10:39 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() :  ClapTrap() {
+FragTrap::FragTrap() {
 	this->_name = "\033[33mDefault\033[0m";
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;

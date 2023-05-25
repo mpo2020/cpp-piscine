@@ -6,7 +6,7 @@
 /*   By: mpolisse <mpolisse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 07:33:31 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/24 13:43:29 by mpolisse         ###   ########.fr       */
+/*   Updated: 2023/05/25 15:19:13 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
+protected:
+	int _defaultHp;
+	int _defaultEp;
+	int _defaultAp;
 public:
 	FragTrap();
 	FragTrap(std:: string name);

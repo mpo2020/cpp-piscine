@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpolisse <mpolisse@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 12:56:58 by mpolisse          #+#    #+#             */
-/*   Updated: 2023/05/29 15:15:47 by mpolisse         ###   ########.fr       */
+/*   Created: 2023/05/29 13:53:23 by mpolisse          #+#    #+#             */
+/*   Updated: 2023/05/29 15:01:55 by mpolisse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "WrongCat.hpp"
+#ifndef DOG_HPP
+#define DOG_HPP
 
-int main()
-{
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
- 	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	
-	delete j;
-	delete i;
-	delete meta;
-	return 0;
+#include "Animal.hpp"
 
-}
+class Dog : public Animal{
+private:
+	Brain *_brain;
+public:
+	Dog();
+	Dog(const Dog& original);
+	Dog& operator=(const Dog& other);
+	~Dog();
+
+	void makeSound() const;
+};
+
+#endif

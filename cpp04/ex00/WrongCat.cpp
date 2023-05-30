@@ -20,6 +20,6 @@ WrongCat::~WrongCat() {
 	std::cout << CYAN << "WrongCat" << DEFAULT << RED << " destructor called" << DEFAULT << std::endl;
 }
 
-/* void WrongCat::makeSound() const{
+void WrongCat::makeSound() const{
 	std::cout << CYAN << "WrongCat" << DEFAULT << YELLOW << " made a " << RED << "wrong meow" << DEFAULT << DEFAULT << std::endl; 
-} */
+}
